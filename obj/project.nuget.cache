@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a3Sj4JiCube73U55vNTtbE01goxI0WrvgzM0c4qGlJ5Ga1Hddn93CUyNGDrEgHzn++4RQQKkoEMVzVtD+VDQyA==",
+  "dgSpecHash": "oG5cTZYftBEgXMw6bv+OeCPVEAx/9G8C7UcBMgiSPwTq0E4mmSLGJ/xDemQJQ4aQ75a+bAdxi8v4o04uw4cW+Q==",
   "success": true,
-  "projectFilePath": "/Users/serb/Documents/sources/IngoSamples/sampleapp/sampleapp.csproj",
+  "projectFilePath": "/Users/serb/Documents/sources/IngoSamples/sampleapp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

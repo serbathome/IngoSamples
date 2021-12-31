@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/serb/Documents/sources/IngoSamples/sampleapp/sampleapp.csproj": {}
+    "/Users/serb/Documents/sources/IngoSamples/sampleapp.csproj": {}
   },
   "projects": {
-    "/Users/serb/Documents/sources/IngoSamples/sampleapp/sampleapp.csproj": {
+    "/Users/serb/Documents/sources/IngoSamples/sampleapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/serb/Documents/sources/IngoSamples/sampleapp/sampleapp.csproj",
+        "projectUniqueName": "/Users/serb/Documents/sources/IngoSamples/sampleapp.csproj",
         "projectName": "sampleapp",
-        "projectPath": "/Users/serb/Documents/sources/IngoSamples/sampleapp/sampleapp.csproj",
+        "projectPath": "/Users/serb/Documents/sources/IngoSamples/sampleapp.csproj",
         "packagesPath": "/Users/serb/.nuget/packages/",
-        "outputPath": "/Users/serb/Documents/sources/IngoSamples/sampleapp/obj/",
+        "outputPath": "/Users/serb/Documents/sources/IngoSamples/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/serb/.nuget/NuGet/NuGet.Config"
