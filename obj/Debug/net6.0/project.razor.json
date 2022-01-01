@@ -16328,6 +16328,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/serb/Documents/sources/IngoSamples/Views/Home/add.cshtml",
+      "TargetPath": "Views\\Home\\add.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/serb/Documents/sources/IngoSamples/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
