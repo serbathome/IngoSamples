@@ -1,8 +1,46 @@
-﻿@{
+﻿@model IEnumerable<Todo>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+@if(@Model is not null)
+{
+    <table>
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Details</td>
+                <td>Date Created</td>
+                <td>Work in Progress</td>
+                <td>Completed</td>
+                <td>Date Completed</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Todo t in Model)
+            {
+                <tr>
+                    <td>@t.Title</td>
+                    <td>@t.Details</td>
+                    <td>@t.CreationDate.ToShortDateString()</td>
+                    <td>@t.isStarted</td>
+                    <td>@t.isCompleted</td>
+                    <td>@if(t.isCompleted == true)
+                        {
+                            <span>@t.CompletionDate.ToShortDateString()</span>
+                        }
+                        else
+                        {
+                            <span>Not yet</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+    
 </div>
