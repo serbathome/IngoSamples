@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using sampleapp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace sampleapp.Controllers;
 
@@ -56,6 +57,49 @@ public class HomeController : Controller
             {
                 _db.Remove(t);
                 await _db.SaveChangesAsync();
+            }
+        }
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Edit(int? TodoId)
+    {
+        if (TodoId is not null)
+        {
+            if (_db.Todos is not null)
+            {
+                var todo = await _db.Todos.FindAsync(TodoId);
+                if (todo is not null)
+                {
+                    return View(todo);
+                }
+            }
+        }
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Todo todo)
+    {
+        if (ModelState.IsValid)
+        {
+            if (todo is not null)
+            {
+                if (_db.Todos is not null)
+                {
+                    if (todo.isCompleted)
+                    {
+                        todo.CompletionDate = DateTime.Now;
+                        todo.isStarted = false;
+                    }
+                    else
+                    {
+                        todo.CompletionDate = DateTime.MaxValue;
+                    }
+                    _db.Entry(todo).State = EntityState.Modified;
+                    _db.SaveChangesAsync();
+                }
             }
         }
         return RedirectToAction("Index");

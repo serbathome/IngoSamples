@@ -11,7 +11,6 @@
     <table class="table">
         <thead>
             <tr>
-                <td>Id</td>
                 <td>Title</td>
                 <td>Details</td>
                 <td>Date Created</td>
@@ -25,7 +24,6 @@
             @foreach(Todo t in Model)
             {
                 <tr>
-                    <td>@t.TodoId</td>
                     <td>@t.Title</td>
                     <td>@t.Details</td>
                     <td>@t.CreationDate.ToShortDateString()</td>

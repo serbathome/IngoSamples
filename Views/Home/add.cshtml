@@ -4,11 +4,18 @@
     ViewData["Title"] = "Add new task";
 }
 
-<div class="text-center">
+<div>
     <form asp-action="AddTodo" asp-controller="Home" method="post">
-        <input asp-for="Title" />
-        <input asp-for="Details" />
-        <input type="submit" value="Add" />
+        <div class="mb-3">
+            <label for="Title" class="form-label">Task Title</label>
+            <input asp-for="Title" class="form-control" aria-describedby="TitleHelp">
+            <div id="TitleHelp" class="form-text">Quick title for the task</div>
+        </div>
+        <div class="mb-3">
+            <label for="Details" class="form-label">Details</label>
+            <textarea asp-for="Details" class="form-control" aria-describedby="DetailsHelp"></textarea>
+            <div id="DetailsHelp" class="form-text">Put notes about the task</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add task</button>
     </form>
-
 </div>

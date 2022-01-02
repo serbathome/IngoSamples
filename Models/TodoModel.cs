@@ -8,8 +8,6 @@ namespace sampleapp.Models
     {
         public DbSet<Todo>? Todos { get; set; }
 
-        // The following configures EF to create a Sqlite database file in the
-        // special "local" folder for your platform.
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlServer("Server=tcp:ingodbsrv.database.windows.net,1433;Initial Catalog=ingodb;Persist Security Info=False;User ID=ingodbadmin;Password=W9qxsriQ5;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
     }

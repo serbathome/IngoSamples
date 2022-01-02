@@ -1,3 +1,7 @@
+using Azure.Security.KeyVault.Secrets;
+using Azure.Identity;
+using Azure.Extensions.AspNetCore.Configuration.Secrets;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

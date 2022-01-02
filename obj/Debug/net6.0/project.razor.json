@@ -16323,6 +16323,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/serb/Documents/sources/IngoSamples/Views/Home/edit.cshtml",
+      "TargetPath": "Views\\Home\\edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/serb/Documents/sources/IngoSamples/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
