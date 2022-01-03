@@ -10,10 +10,10 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private TodoContext _db;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IConfiguration config)
     {
         _logger = logger;
-        _db = new Models.TodoContext();
+        _db = new Models.TodoContext(config["ConnectionString"]);
     }
 
     public IActionResult Index()

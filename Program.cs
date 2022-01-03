@@ -7,6 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Add key vault to configuration
+builder.Configuration.AddAzureKeyVault(
+    new SecretClient(
+        new Uri($"https://ingokeyvault.vault.azure.net/"),
+        new DefaultAzureCredential()
+    ),
+    new KeyVaultSecretManager()
+);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

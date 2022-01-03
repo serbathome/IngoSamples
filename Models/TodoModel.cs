@@ -7,9 +7,15 @@ namespace sampleapp.Models
     public class TodoContext : DbContext
     {
         public DbSet<Todo>? Todos { get; set; }
+        private string _connectionString;
+
+        public TodoContext(string connectionString) : base()
+        {
+            _connectionString = connectionString;
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlServer("Server=tcp:ingodbsrv.database.windows.net,1433;Initial Catalog=ingodb;Persist Security Info=False;User ID=ingodbadmin;Password=W9qxsriQ5;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            => options.UseSqlServer(_connectionString);
     }
     public class Todo
     {
