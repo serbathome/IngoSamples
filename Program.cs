@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 // Add key vault to configuration
 builder.Configuration.AddAzureKeyVault(
     new SecretClient(
-        new Uri($"https://ingokeyvault.vault.azure.net/"),
+        new Uri($"https://ingoauto.vault.azure.net/"),
         new DefaultAzureCredential()
     ),
     new KeyVaultSecretManager()
