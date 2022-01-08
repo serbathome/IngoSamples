@@ -13,7 +13,7 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger, IConfiguration config)
     {
         _logger = logger;
-        _db = new Models.TodoContext(config["ConnectionString"]);
+        _db = new Models.TodoContext(config["Connection"]);
     }
 
     public IActionResult Index()
